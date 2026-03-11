@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/images/Cropped_Logo.jpeg">
+    <title>Noé HT</title>
+</head>
+<body class="terminal">
+<div class="container">
+    <header id="main-header"></header>
+
+    <main>
+        <h1>Bienvenue sur mon site !</h1>
+        <p>Ici, je vais décrire et expliquer certaines de mes expériences, ainsi que certains de mes projets.<br>Je vais
+            aussi donner des tutoriels plus ou moins complet !
+
+            <br>N'hésitez pas à regarder ma présentation, et je suis joignable sur Discord :
+            le_pigeon_sans_ailes_des_egouts_ ou à kokolor@zohomail.eu</p>
+    </main>
+
+    <hr style="border: 0; border-top: 1px double #666; margin: 40px 0;">
+</div>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('main-header').innerHTML = data;
+        });
+</script>
+
+<footer>
+    <h2>2026 - Noé</h2>
+</footer>
+</body>
+</html>

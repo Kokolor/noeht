@@ -1,0 +1,159 @@
+:root {
+    --global-font-size: 15px;
+    --global-line-height: 1.4em;
+    --global-space: 10px;
+    --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+    serif;
+    --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+    serif;
+    --background-color: #222225;
+    --page-width: 60em;
+    --font-color: #e8e9ed;
+    --invert-font-color: #222225;
+    --secondary-color: #a3abba;
+    --tertiary-color: #a3abba;
+    --primary-color: #62c4ff;
+    --error-color: #ff3c74;
+    --progress-bar-background: #3f3f44;
+    --progress-bar-fill: #62c4ff;
+    --code-bg-color: #3f3f44;
+    --input-style: solid;
+    --display-h1-decoration: none;
+    text-align: center;
+}
+
+.terminal-nav {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #666;
+}
+
+a:link, a:visited {
+    color: indianred !important;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: indianred;
+    color: white !important;
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    color: indianred;
+    border-bottom: 1px solid indianred;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown ul {
+    display: none;
+    position: absolute;
+    background: #222;
+    border: 1px solid #666;
+    white-space: nowrap;
+    width: max-content !important;
+}
+
+.dropdown ul li {
+    margin: 0 !important;
+    list-style: none !important;
+    padding: 5px 15px !important;
+}
+
+
+.dropdown:hover ul {
+    display: block;
+}
+
+.disclamer_container {
+    border: 1px solid indianred;
+    background-color: rgba(205, 92, 92, 0.05);;
+}
+
+.disclamer_header {
+    color: indianred !important;
+    font-size: 20px !important;
+}
+
+.disclamer {
+    color: indianred !important;
+    font-size: 16px !important;
+    padding: 10px;
+}
+
+.warning_container {
+    border: 1px solid #cfa100;
+    background-color: rgba(108, 72, 0, 0.05);;
+}
+
+.warning_header {
+    color: #cfa100 !important;
+    font-size: 20px !important;
+    border-bottom: 1px solid #cfa100 !important;
+}
+
+.warning {
+    color: #cfa100 !important;
+    font-size: 16px !important;
+    padding: 10px;
+}
+
+.download-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    padding: 15px;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.file-icon {
+    font-size: 2rem;
+}
+
+.file-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    font-weight: bold;
+    color: #eaeaea;
+}
+
+.file-size {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.download-btn {
+    border: 1px solid indianred !important;
+    color: indianred !important;
+    padding: 10px 20px !important;
+}
+
+.download-btn:hover {
+    background-color: indianred !important;
+    color: #1a1a1a !important;
+    text-decoration: none !important;
+}

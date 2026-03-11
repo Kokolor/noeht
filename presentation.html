@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/images/Cropped_Logo.jpeg">
+    <title>Noé HT</title>
+</head>
+<body class="terminal">
+<div class="container">
+    <header id="main-header"></header>
+
+    <main>
+        <h1>Présentation</h1>
+        <p>Je suis Noé, j'ai bientôt 15 ans. Depuis très jeune, je suis attiré par la programmation. Je suis passé du
+            développement au hardware, pour compiler des projets de plus en plus gros. J’ai enchaîné sur la soudure,
+            puis l’électronique très basique. Puis j’ai fini par tomber amoureux de la haute tension.</p>
+
+        <p>J’ai fait des Jacob’s Ladder, figures de Lichtenberg puis ma première bobine Tesla (de type SGTC) avec un NST
+            de 9 kV à 50mA ainsi qu'un tas d'autres projets !</p>
+
+        <hr style="border: 0; border-top: 1px double #666; margin: 40px 0;">
+    </main>
+</div>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('main-header').innerHTML = data;
+        });
+</script>
+
+<footer>
+    <h2>2026 - Noé</h2>
+</footer>
+</body>
+</html>
