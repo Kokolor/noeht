@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/Cropped_Logo.jpeg">
+    <title>Noé HT</title>
+</head>
+<body class="terminal">
+<div class="container">
+    <header id="main-header"></header>
+
+    <main>
+        <div class="disclamer_container">
+            <h1 class="disclamer_header">Disclamer</h1>
+            <p class="disclamer">Ce projet EST dangereux (mortel).<br>
+
+                Le transformateur de micro-ondes est mortel.<br>
+                Le 230V domestique est dangereux.<br>
+                Les bobines Tesla produisent des hautes tensions dangereuses.<br>
+                Les condensateurs sont mortels même après la mise hors tension du circuit.<br>
+                Les arcs peuvent produire des UV dangereux.<br>
+                Des tubes à vides ou des lampes à vide peuvent produire des rayons-x même éloigné de la bobine.<br>
+                Les radiations électromagnétiques de la bobine Tesla peuvent détruire l'électronique proche.<br>
+                Les radiations électromagnétiques peuvent interférer avec des pacemakers.<br><br>
+
+                Reproduisez à vos risques et périls.
+            </p>
+        </div>
+
+        <h1>Deux transformateurs de micro-onde en série, avec 2x2 condensateurs de micro-ondes :</h1>
+        <div class="video-container">
+            <iframe
+                    src="https://youtube.com/embed/o1BkxNN_zoA"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </main>
+
+    <hr style="border: 0; border-top: 1px double #666; margin: 40px 0;">
+</div>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('main-header').innerHTML = data;
+        });
+</script>
+
+<footer>
+    <h2>2026 - Noé</h2>
+</footer>
+</body>
+</html>
