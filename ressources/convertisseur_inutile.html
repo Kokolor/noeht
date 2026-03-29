@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/Cropped_Logo.jpeg">
+    <title>Noé HT</title>
+</head>
+<body class="terminal">
+<div class="container">
+    <header id="main-header"></header>
+
+    <main>
+        <h2 class="warning_header">Convertisseur d'unités avec précision extrême</h2>
+        <p class="warning">Algorithme de conversion très complexe 1:1</p>
+
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 20px;">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <label for="unitInput"></label><input type="number" id="unitInput" placeholder="Valeur"
+                                                      style="background: #1a1a1a; color: #e8e9ed; border: 1px solid #cfa100; padding: 10px; ">
+
+                <label for="unitSelect"></label><select id="unitSelect"
+                                                        style="background: #1a1a1a; color: #e8e9ed; border: 1px solid #cfa100; padding: 10px;">
+                <optgroup label="Radiations">
+                    <option value="Sv">Sievert (Sv)</option>
+                    <option value="Rad">Rad</option>
+                    <option value="Gy">Gray (Gy)</option>
+                    <option value="R">Röntgen (R)</option>
+                    <option value="Bq">Becquerel (Bq)</option>
+                    <option value="Ci">Curie (Ci)</option>
+                </optgroup>
+
+                <optgroup label="Électricité">
+                    <option value="V">Volt (V)</option>
+                    <option value="kV">Kilovolt (kV)</option>
+                    <option value="MV">Megavolt (MV)</option>
+                    <option value="A">Ampère (A)</option>
+                    <option value="mA">Milliampère (mA)</option>
+                    <option value="W">Watt (W)</option>
+                    <option value="Hz">Hertz (Hz)</option>
+                </optgroup>
+
+                <optgroup label="Physique">
+                    <option value="T">Tesla (T)</option>
+                    <option value="G">Gauss (G)</option>
+                    <option value="J">Joule (J)</option>
+                    <option value="eV">Electron-volt (eV)</option>
+                </optgroup>
+
+                <optgroup label="Special">
+                    <option value="bananes">Banana Equivalent Dose (BED)</option>
+                </optgroup>
+            </select>
+            </div>
+        </div>
+
+        <button class="warning_button" onclick="convert()" style="cursor: pointer; margin-top: 20px;">
+            Convertir !
+        </button>
+
+        <div id="resultBox"
+             style="font-size: 1rem; color: #cfa100; min-height: 1.6em; font-weight: bold; margin-top: 10px;">
+        </div>
+
+        <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">
+            Note : Pour convertir du Rad en Sv, merci de dire bonjour au cheval de la voisine de garde.
+        </p>
+    </main>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('main-header').innerHTML = data;
+            });
+
+        function convert() {
+            const valeur = document.getElementById('unitInput').value;
+            const unite = document.getElementById('unitSelect').value;
+            const display = document.getElementById('resultBox');
+
+            if (valeur === "") {
+                display.innerText = "Données manquantes ;)";
+                display.style.color = "var(--error-color)";
+                return;
+            }
+
+            display.style.color = "#cfa100";
+            display.innerText = "Calcul...";
+
+            setTimeout(() => {
+                display.innerHTML = `RÉSULTAT : ${valeur} ${unite}`;
+                console.log(`Conversion : ${valeur}${unite} = ${valeur}${unite}`);
+            }, 400);
+        }
+    </script>
+
+    <footer>
+        <h2>2026 - Noé</h2>
+    </footer>
+</div>
+</body>
+</html>
