@@ -121,6 +121,13 @@ h1 {
     margin: 20px auto;
 }
 
+.warning_button {
+    border: 1px solid #cfa100 !important;
+    color: #cfa100 !important;
+    background-color: transparent !important;
+    padding: 10px 20px !important;
+}
+
 .file-info {
     display: flex;
     align-items: center;
